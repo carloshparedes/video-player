@@ -1,0 +1,101 @@
+/* @import "/css/buttons.css"; */
+
+.button {
+  inline-size: 32px;
+  block-size: 32px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.button:active{
+  transform: scale(.9);
+}
+
+#play {
+  background-image: url('../images/play.svg');
+}
+
+#pause {
+  background-image: url('../images/pause.svg');
+}
+
+#backward {
+  background-image: url('../images/-10.svg');
+}
+
+#forward {
+  background-image: url('../images/+10.svg');
+}
+
+body {
+  background-color: #0f3460;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+}
+
+.player {
+  position: relative;
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+.player video {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  vertical-align: middle;
+}
+
+.player-title {
+  color: whitesmoke;
+  position: absolute;
+  margin: 0;
+  inset-block-start: 5px;
+  inset-inline-start: 20px;
+}
+
+.player-actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.player-progress {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 10px;
+  z-index: 1;
+}
+
+.player-progress input {
+  flex: 1;
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: .3s opacity;
+}
+
+.player:hover .player-overlay {
+  opacity: 1;
+}
+
+
+
+
